@@ -1,0 +1,26 @@
+import { type Gif } from "../data/gifs.data";
+
+interface GifListProp {
+  gifs: Gif[];
+}
+
+export const GifList = ({ gifs }: GifListProp) => {
+  return (
+    <div className="gifs-container">
+      {gifs.map((gif) => (
+        <div key={gif.id} className="gif-card">
+          <img
+            src={gif.url}
+            alt={gif.title}
+            width={gif.width}
+            height={gif.height}
+          />
+          <h3>{gif.title}</h3>
+          <p>
+            {gif.width}x{gif.height}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+};
