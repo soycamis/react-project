@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// Interface
 interface FormSearchProps {
   placeholder: string;
   onQuerySearch: (query: string) => void;
